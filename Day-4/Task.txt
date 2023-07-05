@@ -1,0 +1,155 @@
+--------------------------------------------------------------------------------------------------------
+                                      ODDS
+(function() {
+let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,17,18,19,20]
+
+let odds = arr.filter(n => n%2)
+
+console.log(odds)
+})();
+
+--------------------------------------------------------------------------------------------------------------
+                                      CAPS
+function () {
+  let text = "sibichakravarthy";
+  let result = text.toUpperCase();
+console.log(resul);
+})();
+-------------------------------------------------------------------------------------------------------------
+                                       SUMS
+function () { 
+        let myNums =[1,2,3,4,5];
+
+        let sum = 0; 
+        
+        for (let i = 0; i < myNums.length; i++) 
+            sum += myNums[i]; 
+   
+        } 
+     
+    console.log(sum);
+})();
+------------------------------------------------------------------------------------------------------------
+                                        PRIME NUMBR
+(function() {
+let array = [2, 3, 4, 5, 6, 7, 8, 9, 10]; 
+
+function isPrime(num) {
+  for (let start = 2; num > start; start++) {
+    if (num % start == 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(array.filter(isPrime));
+})();
+----------------------------------------------------------------------------------------------------------
+                                       PALINDROME
+
+(function() {
+let arr = ['carecar', 1344, 12321, 'did', 'cannot'];
+let isPalindrome = el => {
+   let str = String(el);
+   let i = 0;
+   let j = str.length - 1;
+   while(i < j) {
+      if(str[i] === str[j]) {
+         i++;
+         j--;
+      }
+      else {
+         return false;
+      }
+   }
+   return true;
+};
+let findPalindrome = arr => {
+   return arr.filter(el => isPalindrome(el));
+};
+console.log(findPalindrome(arr));
+})();
+-----------------------------------------------------------------------------------------------------------
+                                         MEDIAN
+
+(function() {
+ var i = 0; 
+    var j = 0; 
+    var count;
+    var m1 = -1, m2 = -1;
+    function getMedian(ar1, ar2, n)
+{
+
+    for (count = 0; count <= n; count++)
+    {
+        
+        if (i == n)
+        {
+            m1 = m2;
+            m2 = ar2[0];
+            break;
+        }
+ 
+        
+        else if (j == n)
+        {
+            m1 = m2;
+            m2 = ar1[0];
+            break;
+        }
+    
+        if (ar1[i] <= ar2[j])
+        {
+            m1 = m2;
+            m2 = ar1[i];
+            i++;
+        }
+        else
+        {
+            m1 = m2;
+            m2 = ar2[j];
+            j++;
+        }
+    }
+ 
+    return (m1 + m2)/2;
+}
+
+var ar1 = [2, 12, 15, 30, 38];
+var ar2 = [2, 12, 15, 30, 38];
+var n1 = ar1.length;
+var n2 = ar2.length;
+if (n1 == n2)
+    console.log("Median is "+ getMedian(ar1, ar2, n1));
+else
+    console.log("Doesn't work for arrays of unequal size");
+})();
+------------------------------------------------------------------------------------------------------------
+                                       DUPLICATE
+(function() {
+let arr = ["apple", "mango", "apple",
+          "orange", "mango", "mango"];
+  
+function removeDuplicates(arr) {
+    return arr.filter((item,
+        index) => arr.indexOf(item) === index);
+}
+console.log(removeDuplicates(arr));
+})();
+----------------------------------------------------------------------------------------------------------------
+                                      ROTATE
+(function() {
+
+let rotate = (arr, count = 1) => {
+  return [...arr.slice(count, arr.length), ...arr.slice(0, count)];
+};
+
+let arr = [1,2,3,4,5];
+
+console.log(rotate(arr, 1));  // [2, 3, 4, 5, 1]
+console.log(rotate(arr, 2));  // [3, 4, 5, 1, 2]
+console.log(rotate(arr, -2)); // [4, 5, 1, 2, 3]
+console.log(rotate(arr, -1)); // [5, 1, 2, 3, 4]
+})();
+------------------------------------------------------------------------------------------------------------ 
