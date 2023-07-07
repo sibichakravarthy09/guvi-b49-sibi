@@ -1,0 +1,31 @@
+{
+  "name": "sibi chakravarthy",
+  "email": "arjunansibichakravarthy007@gmail.com",
+  "phone": "9659586018",
+  "address": "31 natchumuthu colony kallakudi , trichy",
+  "skills": ["tissue culture"],
+  "experience": [
+    {
+      "title": "production officer",
+      "company": "Genurem biosciences llp",
+      "start": "2019-06-01",
+      "end": "2021-07-31",
+      "description": "Developed hybrid plantation using tissue cultue."
+    },
+    {
+      "title": " senior production officer",
+      "company": "LifeCell international",
+      "start": "2021-08-09",
+      "end": "2023-06-09",
+      "description": "Developed hybrid plantation using tissue cultues."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Botany",
+      "university": "St.Joseph's college Trichy",
+      "start": "2016-07-21",
+      "end": "2019-04-31"
+    }
+  ]
+}

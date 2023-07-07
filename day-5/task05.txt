@@ -1,0 +1,66 @@
+--------------------------------------------------------------------- 
+                      FOR LOOP
+
+var json = {
+   jsonData:  [
+       {one: [20, 30, 40, 50, 60]},
+       {two: [70, 80, 90]},
+       {three: [100, 110]}
+   ]
+}; 
+for (var i=0; i<json.jsonData.length; i++) {
+   for (var key in json.jsonData[i]) {
+       for (var j= 0; j<json.jsonData[i][key].length; j++) {
+           console.log(json.jsonData[i][key][j])
+       }
+   }
+}
+----------------------------------------------------------------------
+
+                            FOR EACH
+
+var json = [{
+    "id" : "1", 
+    "msg"   : "GUIDE ME",
+    "tid" : "2023-07-06 12:35",
+    "fromWho": "sibichakravarthy09@gmail.com"
+},
+{
+    "id" : "2", 
+    "msg"   : "OF COURSE",
+    "tid" : "2023-07-06 01:45",
+    "fromWho": "guvib49@gmail.com"
+}];
+
+json.forEach((item) => {
+  console.log('ID: ' + item.id);
+  console.log('MSG: ' + item.msg);
+  console.log('TID: ' + item.tid);
+  console.log('FROMWHO: ' + item.fromWho);
+});
+-----------------------------------------------------------------------
+                          FOR IN
+const myJSON = '{"name":"sibichakravarthy", "age":25}';
+const myObj = JSON.parse(myJSON);
+
+let text = "";
+for (const x in myObj) {
+  text += myObj[x] + ", ";
+  console.log(myObj[x])
+}
+
+-----------------------------------------------------------------------
+                          FOR OF
+
+const jsonObject = {
+  "name": "sibi chakravarthy",
+  "age": 25,
+  
+};
+for (const property in jsonObject) {
+  console.log(property, jsonObject[property]);
+}
+
+
+
+-----------------------------------------------------------------------
