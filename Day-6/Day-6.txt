@@ -1,0 +1,99 @@
+--------------------------------------------------------------------------------------------------------------------
+                                   
+class Person {
+  constructor(myName,myAge,myGender) {
+    this.myName = myName;
+    this.myAge = myAge;
+    this.myGender=myGender;
+  }
+  
+  getMyName() {
+    return this.myName;
+  }
+  
+  getMyAge() {
+    return this.myAge;
+  }
+  getMyGender() {
+    return this.myGender;
+  }
+}
+
+let per = new Person("sibichakravarthy","25","male");
+console.log(per.getMyName(), per.getMyAge(), per.getMyGender());
+
+--------------------------------------------------------------------------------------------------------------
+
+
+class Movie {
+  constructor(title, studio, rating = "PG"){
+    this.title = title;
+    this.studio = studio;
+    if(rating === "PG")
+    {
+      this.rating = "PG";
+    }
+    else {
+      this.rating = rating;
+    }
+  }
+  
+  getPG(arr) {
+    return;
+  }
+}
+
+let film = new Movie("Casino Royale", "Eon Productions", "PG13");
+let ipArr = [{title:"", studio: "", rating: ""},
+              {title:"", studio: "", rating: ""},
+              {title:"", studio: "", rating: ""}];
+film.getPG(ipArr);
+console.log( film);
+
+--------------------------------------------------------------------------------------------------------------
+
+class Circle {
+  constructor(radius, color) {
+    this.radius = radius;
+    this.color = color;
+  }
+  getRadius() {
+    return this.radius;
+  }
+  setRadius(value) {
+    this.radius = value;
+  }
+  getColor() {
+    return this.color;
+  }
+  setColor(value) {
+    this.color = value;
+  }
+  getArea() {
+    return Math.PI * this.radius * this.radius;
+  }
+  getCircumference() {
+    return 2 * Math.PI * this.radius;
+  }
+}
+let cir = new Circle(5.0, "red");
+console.log(cir.getArea()); 
+console.log(cir.getCircumference()); 
+
+----------------------------------------------------------------------------------------------------------
+
+class UberPriceCalculator {
+  constructor(rideDistance, rideTime) {
+    this.rideDistance = rideDistance;
+    this.rideTime = rideTime;
+  }
+  calculatePrice() {
+    const basePrice = 20;
+    const distancePrice = this.rideDistance * 10 ;
+    const timePrice = this.rideTime * 5;
+    return basePrice + distancePrice + timePrice;
+  }
+}
+const uberPriceCalculator = new UberPriceCalculator(7, 4);
+const price = uberPriceCalculator.calculatePrice();
+console.log(price); 
