@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>XMLHttpRequest Example</title>
+  </head>
+  <body>
+    <script>
+ const xhr = new XMLHttpRequest();
+      var method = "GET";
+      var url = "https://restcountries.com/v3.1/all";
+
+      
+      xhr.open(method, url);
+
+      xhr.onload = function() {
+      const data = JSON.parse(xhr.responseText);
+      console.log(data)
+
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].currencies != undefined) {
+          Object.keys(data[i].currencies).forEach((key)=> {
+            if (key === "USD") {
+              console.log(data[i].currencies);
+            }
+          });
+        }
+      }
+    };
+      xhr.send();
+
+
+    </script>
+  </body>
+</head>
+</html>
