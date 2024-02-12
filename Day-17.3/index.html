@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Bootstrap Cards</title>
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       .container{
+        font-family: 'Poppins', sans-serif;
+       }
+       .container{
+        background-color: palegreen;
+
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-sm-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Country:</strong> <span id="countryName"></span></p>
+                        <p><strong>Capital:</strong> <span id="capital"></span></p>
+                        <p><strong>Latlng:</strong> <span id="latlng"></span></p>
+                        <p><strong>Flag:</strong> <img id="flag" src="" alt="Flag"></p>
+                        <p><strong>Region:</strong> <span id="region"></span></p>
+                        <button class="btn btn-primary" id="weatherButton">Click for Weather</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        
+                    </div>
+                    <div class="card-body">
+                        <p><strong>SINGAPORE</strong>
+                        <p><strong>Capital:</strong> <span id="capital"></span></p>
+                        <p><strong>Latlng:</strong> <span id="latlng"></span></p>
+                        <p><strong>Flag:</strong> <img id="flag" src="" alt="Flag"></p>
+                        <p><strong>Region:</strong> <span id="region"></span></p>
+                         <button class="btn btn-primary">Click for Weather</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        
+                    </div>
+                    <div class="card-body">
+                        <p><strong>PERU</strong> 
+                        <p><strong>Capital:</strong> <span id="capital"></span></p>
+                        <p><strong>Latlng:</strong> <span id="latlng"></span></p>
+                        <p><strong>Flag:</strong> <img id="flag" src="" alt="Flag"></p>
+                        <p><strong>Region:</strong> <span id="region"></span></p>
+                        <button class="btn btn-primary">Click for Weather</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Bootstrap JavaScript and jQuery (Optional) -->
+   <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

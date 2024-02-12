@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Country Information</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+          
+        }
+        #new{
+            border: 1px solid #ccc;
+            margin-bottom: 10px;  
+            background-color: antiquewhite;  
+        }
+     
+          .container {
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            background-color: bisque;
+        }
+        .card-header{
+            background-color: beige;
+        }
+
+        .container-header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .container-body {
+            padding: 10px;
+        }
+        .card-body{
+            background-color: #adefd1ff;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="new">
+    <div class="container">
+        <div class="row">
+              <div class="col-lg-4 col-sm-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        SINGAPORE
+                    </div>
+                    <div class="card-body">
+                        <img src="https://flagcdn.com/w320/sg.png" style="width: 50%"><br>
+                        <p><strong>Name:</strong> <span id="sg-name"></span></p>
+                        <p><strong>Capital:</strong> <span id="sg-capital"></span></p>
+                        <p><strong>Latitude and Longitude:</strong> <span id="sg-latlng"></span></p>
+                        <p><strong>Region:</strong> <span id="sg-region"></span></p>
+                        <p><strong>Country Code:</strong> <span id="sg-code"></span></p>
+                        <a href="https://api.openweathermap.org/data/2.5/weather?lat=1.3521&lon=103.8198&appid=06d007ac8d97d2799d4143cd1b5ef560" 
+                        class="btn btn-primary btn-lg mt-3" 
+                        target="_blank">Click for Weather</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        FRANCE
+                    </div>
+                    <div class="card-body">
+                        <img src="https://flagcdn.com/w320/fr.png"  style="width: 50%"> <br>
+                        <p><strong>Name:</strong> <span id="france-name"></span></p>
+                        <p><strong>Capital:</strong> <span id="france-capital"></span></p>
+                        <p><strong>Latitude and Longitude:</strong> <span id="france-latlng"></span></p>
+                        <p><strong>Region:</strong> <span id="france-region"></span></p>
+                        <p><strong>Country Code:</strong> <span id="france-code"></span></p>
+                        <a href="https://api.openweathermap.org/data/2.5/weather?lat=46.2276&lon=2.2137&appid=06d007ac8d97d2799d4143cd1b5ef560"
+                        class="btn btn-primary btn-lg mt-3" 
+                        target="_blank">Click for Weather</a>
+                    </div>
+                </div>
+            </div>
+
+         
+            <div class="col-lg-4 col-sm-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        CANADA
+                    </div>
+                    <div class="card-body">
+                        <img src="https://flagcdn.com/w320/ca.png"  style="width: 70%"><br>
+                        <p><strong>Name:</strong> <span id="canada-name"></span></p>
+                        <p><strong>Capital:</strong> <span id="canada-capital"></span></p>
+                        <p><strong>Latitude and Longitude:</strong> <span id="canada-latlng"></span></p>
+                        <p><strong>Region:</strong> <span id="canada-region"></span></p>
+                        <p><strong>Country Code:</strong> <span id="canada-code"></span></p>
+                        <a href="https://api.openweathermap.org/data/2.5/weather?lat=56.1304&lon=106.3468&appid=06d007ac8d97d2799d4143cd1b5ef560"
+                        class="btn btn-primary btn-lg mt-3" 
+                        target="_blank">Click for Weather</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+    <script src="script.js"></script>
+</body>
+</html>
