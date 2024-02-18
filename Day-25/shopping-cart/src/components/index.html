@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+
+  
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Shopping Cart</h1>
+  <div class="row" id="item-list">
+    
+  </div>
+  <hr>
+  <div id="cart">
+    <h3>Shopping Cart</h3>
+    <ul id="cart-items" class="list-group">
+     
+    </ul>
+    <h4>Total: $<span id="total">0.00</span></h4>
+    <button id="checkout-btn" class="btn btn-primary">Checkout</button>
+  </div>
+</div>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const items = [
+      { id: 1, name: 'Item 1', price: 10.00 },
+      { id: 2, name: 'Item 2', price: 15.00 },
+      { id: 3, name: 'Item 3', price: 20.00 }
+    ];
+
+    const itemList = document.getElementById('item-list');
+    const cartItems = document.getElementById('cart-items');
+    const totalSpan = document.getElementById('total');
+    const checkoutBtn = document.getElementById('checkout-btn');
+
+    let cart = [];
+
+    // Render items
+    items.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'col-md-4';
+      card.innerHTML = `
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">${item.name}</h5>
+            <p class="card-text">$${item.price.toFixed(2)}</p>
+            <button class="btn btn-primary add-to-cart" data-id="${item.id}">Add to Cart</button>
+          </div>
+        </div>
+      `;
+      itemList.appendChild(card);
+    });
+
+    // Add item to cart
+    itemList.addEventListener('click', function(e) {
+      if (e.target.classList.contains('add-to-cart')) {
+        const itemId = parseInt(e.target.getAttribute('data-id'));
+        const itemToAdd = items.find(item => item.id === itemId);
+        if (itemToAdd) {
+          cart.push(itemToAdd);
+          renderCart();
+        }
+      }
+    });
+
+    // Remove item from cart
+    cartItems.addEventListener('click', function(e) {
+      if (e.target.classList.contains('remove-from-cart')) {
+        const itemId = parseInt(e.target.getAttribute('data-id'));
+        cart = cart.filter(item => item.id !== itemId);
+        renderCart();
+      }
+    });
+
+    // Render cart
+    function renderCart() {
+      cartItems.innerHTML = '';
+      let totalPrice = 0;
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'list-group-item d-flex justify-content-between align-items-center';
+        li.innerHTML = `
+          ${item.name} - $${item.price.toFixed(2)}
+          <button class="btn btn-danger remove-from-cart" data-id="${item.id}">Remove</button>
+        `;
+        cartItems.appendChild(li);
+        totalPrice += item.price;
+      });
+      totalSpan.textContent = totalPrice.toFixed(2);
+    }
+
+    // Checkout
+    checkoutBtn.addEventListener('click', function() {
+      alert('Thank you for your purchase!');
+      cart = [];
+      renderCart();
+    });
+  });
+</script>
+
+</body>
+</html>
