@@ -1,13 +1,14 @@
 * {
   box-sizing: border-box;
 }
-
 body {
-  
- 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: blanchedalmond;
+  background-image: url('https://images.pexels.com/photos/990432/pexels-photo-990432.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 
 .insignia {
   text-align: center;

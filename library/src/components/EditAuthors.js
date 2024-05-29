@@ -7,17 +7,20 @@ import * as Yup from 'yup'
 
 export function EditAuthors() {
     const { authorId } = useParams()
-    const [ author, setAuthor ] = useState()
+    const [ author, setAuthor ] = useState(null) // Initialize author state with null
 
     useEffect(() => {
         axios.get(`${API}/authors/${authorId}`)
             .then((res) => setAuthor(res.data))
             .catch(err => console.error("Error fetching Author:", err))
-    }, [])
+    }, [authorId]) // Include authorId in the dependency array to fetch author data when it changes
 
-    // console.log(author)
+    // Return loading message while author data is being fetched
+    if (!author) {
+        return "Loading..."
+    }
 
-    return author ? <EditAuthorForm author={author} /> : "Loading..."
+    return <EditAuthorForm author={author} />
 }
 
 function EditAuthorForm({ author }) {
