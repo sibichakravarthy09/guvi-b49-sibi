@@ -1,4 +1,3 @@
-console.log("URL Shortener");
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -17,7 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// User is the base route
+// Base routes
 app.use('/user', userRouter);
 app.use('/url', isAuthenticated, urlRouter);
 
@@ -25,14 +24,14 @@ app.get('/', (req, res) => {
   res.send({ msg: 'Connection working - URL shortener app' });
 });
 
-// To get URL redirection from short URL
+// URL redirection from short URL
 app.get('/:urlID', async (req, res) => {
   try {
     const url = await getURL({ urlID: req.params.urlID });
     if (url) {
-      console.log('redirecting');
+      console.log('Redirecting to long URL');
       return res.status(200).json({ longURL: url.longURL });
-      // return res.redirect(url.longURL);
+      // return res.redirect(url.longURL); // Uncomment this line to enable redirection
     } else {
       return res.status(404).json({ message: 'No URL Found' });
     }
@@ -44,7 +43,10 @@ app.get('/:urlID', async (req, res) => {
 
 // Ensure the database connection is established before starting the server
 dbConnection().then(() => {
-  app.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));
+  app.listen(PORT, () => {
+    console.log(`Server started at http://localhost:${PORT}`);
+    console.log("URL Shortener");
+  });
 }).catch(err => {
   console.error('Failed to connect to the database. Server not started.', err);
 });
