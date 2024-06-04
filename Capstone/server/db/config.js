@@ -38,7 +38,7 @@ const initializedSchemas = async () => {
     await createDynamicSchemas(CustomFields);
 }
 
-const connectDB = async (DATABASE_URL, DATABASE) => {
+export const connectDB = async (DATABASE_URL, DATABASE) => {
     try {
         const DB_OPTIONS = {
             dbName: DATABASE
@@ -93,5 +93,3 @@ const connectDB = async (DATABASE_URL, DATABASE) => {
         console.log("Database Not connected", err.message);
     }
 }
-
-export default connectDB;

@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import route from './controllers/route.js';
-import { config as db } from './db/config.js';
+import { connectDB } from './db/config.js';  // Use named import
 import { config as dotenvConfig } from 'dotenv';
 import fs from 'fs';
 import path from 'path';
@@ -36,4 +36,4 @@ const server = app.listen(port, () => {
 const DATABASE_URL = process.env.DB_URL || 'mongodb://localhost:27017/sibi.RealEstate';
 const DATABASE = process.env.DB || 'sibi';
 
-db(DATABASE_URL, DATABASE);
+connectDB(DATABASE_URL, DATABASE);
