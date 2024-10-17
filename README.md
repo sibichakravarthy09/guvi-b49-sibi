@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Overview
 
 Welcome to the Customer Relationship Management (CRM) project! This system is designed to efficiently manage various aspects of customer interactions and internal tasks. It utilizes React for the frontend and an Express backend, interacting seamlessly with a MongoDB database. Explore the details of this project's objectives, demonstrations, technical design, and user interface in the sections below.
@@ -194,3 +195,13 @@ Ensure these tools are installed:
 (not functional on AWS deployment)
 - **Email**: admin@gmail.com
 - **Password**: admin123
+=======
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+>>>>>>> 2e48c926d1ed799bb7dabd2da33188e0648ade4a
